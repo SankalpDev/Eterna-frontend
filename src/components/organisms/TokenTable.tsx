@@ -4,7 +4,7 @@ import { TokenRow } from './TokenRow';
 import { TableLoadingSkeleton } from '@/components/molecules/LoadingSkeleton';
 import { ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'; // Import ScrollArea
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import type { Token } from '@/store/tokenStore';
 
 interface ColumnHeader {
@@ -15,7 +15,7 @@ interface ColumnHeader {
 }
 
 const columns: ColumnHeader[] = [
-  { key: 'symbol', label: 'Token', sortable: true, className: 'col-span-2' }, // Wider
+  { key: 'symbol', label: 'Token', sortable: true, className: 'col-span-2' },
   { key: 'price', label: 'Price', sortable: true, className: 'col-span-1 text-right' },
   { key: 'priceChange24h', label: '24h %', sortable: true, className: 'col-span-1 text-right' },
   { key: 'volume24h', label: 'Vol', sortable: true, className: 'col-span-1 text-right' },
@@ -39,7 +39,7 @@ export const TokenTable = memo(() => {
         const bVal = b[sortBy];
         
         if (typeof aVal === 'number' && typeof bVal === 'number') {
-          return sortOrder === 'asc' ? aVal - bVal : bVal - aValue;
+          return sortOrder === 'asc' ? aVal - bVal : bVal - aVal;
         }
         if (typeof aVal === 'string' && typeof bVal === 'string') {
           return sortOrder === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
@@ -65,7 +65,7 @@ export const TokenTable = memo(() => {
   return (
     <div className="rounded-lg border border-border bg-card flex flex-col relative">
       <ScrollArea className="w-full whitespace-nowrap rounded-md border">
-        <div className="min-w-[800px]"> {/* Forces scroll on mobile < 800px */}
+        <div className="min-w-[800px]">
           {/* Table Header */}
           <div className="grid grid-cols-7 gap-4 p-4 border-b border-border bg-muted/30 items-center">
             {columns.map((column) => (
