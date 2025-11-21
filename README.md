@@ -4,12 +4,23 @@
 A pixel-perfect, high-performance reconstruction of the **Axiom Trade** token discovery dashboard.
 
 ---
+## **Live Demo**
+🚀 **Deployed on Vercel:**  
+🔗 https://axiom-trade-ten.vercel.app/
+
+---
 
 ## **Features**
 - **Real-time Updates** — WebSocket-based mock simulation for live price tickers  
 - **Atomic Architecture** — Modular, reusable components  
 - **High Performance** — Optimized rendering with `React.memo` + virtualization  
 - **Responsive** — Fully adaptive layout down to **320px**
+
+---
+## **Screenshots**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2760a4b2-0f82-4aac-a7ea-bf11f8550002" />
+<img width="642" height="1070" alt="axiom-trade-ten vercel app_" src="https://github.com/user-attachments/assets/ed63d1f4-c9dc-471b-958f-f86f27785b62" />
+
 
 ---
 
