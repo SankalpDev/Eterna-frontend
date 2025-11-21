@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 280 65% 60%;
+
+    --price-up: 142 76% 36%;
+    --price-down: 0 72% 51%;
+    --price-neutral: 215 20% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(217 91% 60% / 0.05));
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 10%), hsl(222 47% 8%));
+
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.15);
+    --shadow-card: 0 4px 6px hsl(222 47% 4% / 0.3);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
